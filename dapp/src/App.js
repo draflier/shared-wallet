@@ -212,10 +212,11 @@ function App() {
 
   useEffect(() => {
     checkIfWalletIsConnected();
-    //getWalletName();
-    //getWalletOwnerHandler();
-    //walletBalanceHandler()
-  }, [isWalletConnected])
+    getWalletName();
+    getWalletOwnerHandler();
+    walletBalanceHandler();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isWalletConnected, walletOwnerReply,walletBalance,currentAddress])
 
   return (
     <main className="main-container">
