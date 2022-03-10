@@ -109,7 +109,7 @@ function App() {
         let owner = await walletContract.chkWalletOwner({ gasLimit: 5000000 });
         const [account] = await window.ethereum.request({ method: 'eth_requestAccounts' });
         console.log("owner ==> " + owner);
-        if (owner == true)
+        if (owner === true)
         {
           console.log("owner is true");
           setWalletOwnerReply(account + " is wallet owner");
@@ -211,9 +211,9 @@ function App() {
 
   useEffect(() => {
     checkIfWalletIsConnected();
-    getWalletName();
-    getWalletOwnerHandler();
-    walletBalanceHandler()
+    //getWalletName();
+    //getWalletOwnerHandler();
+    //walletBalanceHandler()
   }, [isWalletConnected])
 
   return (
