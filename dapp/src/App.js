@@ -22,6 +22,7 @@ function App() {
         const account = accounts[0];
         setIsWalletConnected(true);
         setCurrentAddress(account);
+        getWalletOwnerHandler();
         console.log("Account Connected: ", account);
       } else {
         setError("Please install a MetaMask wallet to use our shared wallet.");
